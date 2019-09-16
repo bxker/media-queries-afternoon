@@ -53,22 +53,22 @@
 
 .drop-down, .drop-down-open, .drop-down-closed{
     width: 100vw;
-    height: 20vh;
+    height: 15vh;
     background: rgb(48, 46, 46);
     position: fixed;
     top: 0;
     left: 0;
-    transform: translateY(80px);
+    display: none;
 }
 
 .drop-down-open{
     display: block;
-    animation: open .5s forwards linear;
+    animation: open .3s forwards linear;
 }
 
 .drop-down-closed{
-    display: none;
-    animation: closed .5s forwards linear;
+    display: block;
+    animation: closed .7s forwards linear;
 }
 
 .menu-content {
@@ -82,25 +82,27 @@
 }
 
 @keyframes open {
+    from{
+        transform: translateY(0px);
+    }
     to {
-        transform: translateY(80px);
+        transform: translateY(10vh);
     }
 }
 
 @keyframes closed {
     from{
-        transform: translateY(0px)
+        transform: translateY(10vh);
     }
     to{
-        display: none;
-        transform: translateY(80px);
+        transform: translateY(-20vh);
     }
 }
 
 @media(max-width: 991px){
     .nav-main {
         height: 10vh;
-    background: rgb(48, 46, 46);
+        background: rgb(48, 46, 46);
     }
     .container-2 ul {
         width: 20vw;
@@ -111,10 +113,17 @@
     #hamburger {
         display: block;
     }
+    .drop-down-open{
+        z-index: -1;
+    }
+    .drop-down-closed{
+        z-index: -1;
+    }
 }
 
 @media(min-width: 991px){
     .drop-down-open{
-        display:none;
-    }
+        display: none;
+    }  
+
 }
