@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+.nav-main{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    height: 15vh;
+}
+
+.container-1{
+    font-size: 2rem;
+    color: #FED136;
+    font-family: 'Kaushan Script', cursive;
+}
+
+.container-2 ul{
+    display: flex;
+    width: 40vw;
+    justify-content: space-evenly;
+    font-family: 'Montserrat', sans-serif;
+    align-items: center;
+    
+}
+
+.container-2 li {
+    color: white;
+    cursor: pointer;
+}
+
+.container-2 li:hover{
+    color: #FED136;
+}
+
+.container-2 button {
+    width: 80px;
+    height: 7vh;
+    border: none;
+    color: white;
+    background: #FED136;
+    font-size: 1.05rem;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.container-2 img {
+    width: 20px;
+    margin-top: 5px;
+    filter: invert(1);
+}
+#hamburger {
+    display:none;
+}
+
+.drop-down, .drop-down-open, .drop-down-closed{
+    width: 100vw;
+    height: 20vh;
+    background: rgb(48, 46, 46);
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateY(80px);
+}
+
+.drop-down-open{
+    display: block;
+    animation: open .5s forwards linear;
+}
+
+.drop-down-closed{
+    display: none;
+    animation: closed .5s forwards linear;
+}
+
+.menu-content {
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+}
+
+@keyframes open {
+    to {
+        transform: translateY(80px);
+    }
+}
+
+@keyframes closed {
+    from{
+        transform: translateY(0px)
+    }
+    to{
+        display: none;
+        transform: translateY(80px);
+    }
+}
+
+@media(max-width: 991px){
+    .nav-main {
+        height: 10vh;
+    background: rgb(48, 46, 46);
+    }
+    .container-2 ul {
+        width: 20vw;
+    }
+    .container-2 li{
+        display: none;
+    }
+    #hamburger {
+        display: block;
+    }
+}
+
+@media(min-width: 991px){
+    .drop-down-open{
+        display:none;
+    }
+}
