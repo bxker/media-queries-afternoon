@@ -5,10 +5,25 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: gray;
+  background-image: url(https://blackrockdigital.github.io/startbootstrap-agency/img/header-bg.jpg);
+  background-color: gray;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-attachment: scroll;
+
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+@media(max-width: 991px){
+  body {
+    background-size: 150%;
+    background-position: center;
+    background-position-y: 10vh;
+  }
 }
